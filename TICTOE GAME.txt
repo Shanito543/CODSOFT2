@@ -46,8 +46,10 @@ int main() {
     int row, col;
     while (1) {
         print();
-        printf("Player %c, enter row and column (0-2): ", current);
+       printf("Player %c, enter row and column (1-3): ", current);
         scanf("%d %d", &row, &col);
+        row--;
+        col--;
 
         if (row < 0 || row > 2 || col < 0 || col > 2 || b[row][col] != ' ') {
             printf("Invalid move, try again.\n");
@@ -71,3 +73,4 @@ int main() {
 
     return 0;
 }
+
